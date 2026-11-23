@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<div class="container">
+    <div class="caption-container">
+        <p id="caption"></p>
+    </div>
+  <div class="mySlides">
+    <div class="numbertext">1 / 2</div>
+    <img src=".\20250124_075007.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 2</div>
+    <img src=".\20250124_075008.jpg" style="width:100%">
+  </div>
+
+    
+  <a class="prev" onclick="plusSlides(-1)"><img src="..\thatway.png" alt="BACK?"/></a>
+  <a class="next" onclick="plusSlides(1)"><img src="..\thisway.png" alt="NEXT"/></a>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src=".\20250124_075007.jpg" style="width:100%" onclick="currentSlide(1)" alt="Magic Kingdom gate, waiting for the park to open as monorail goes by.">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src=".\20250124_075008.jpg" style="width:100%" onclick="currentSlide(2)" alt="Magic Kingdom gate, waiting for the park to open as monorail goes by.">
+    </div>
+  </div>
+</div>
+<script src="../script.js"></script>
+</body>
+</html>

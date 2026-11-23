@@ -7,6 +7,18 @@
     <title>My Website</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
+<script type="text/javascript">$(function() {
+		$('.map').maphilight({
+      alwaysOn: true, 
+      strokeColor: '000000',
+      strokeWidth: 3, 
+      fillColor: '2802FF', 
+      fillOpacity: 0.4,
+      strokeLineDash: [10, 3, 10, 3]
+    });
+	});</script>
   </head>
   <!-- <body>
     <main>
@@ -15,24 +27,31 @@
     <script src="index.js"></script>
   </body> -->
   <body>
-    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20190227165729/area11.png"
-        alt="" width="300" height="119" 
-        class="aligncenter size-medium wp-image-910965" 
-        usemap="#shapemap" />
+    <h1>Testing</h1>
+    <img src="./content/mk-map.png"
+        alt=""  
+        class="aligncenter size-medium wp-image-910965 map" 
+        usemap="#mk-map" />
 
-    <map name="shapemap">
-        <!-- area tag contained image. -->
-        <area shape="poly" coords="59,31,28,83,91,83"
-            href="https://media.geeksforgeeks.org/wp-content/uploads/20190227165802/area2.png" 
-            alt="Triangle">
+    <map name="mk-map">
+    <area target="" alt="fountain" title="fountain" href="mk/mk-fountain.html" coords="629,384,579,348" shape="rect">
+    <area target="" alt="mk-gate" title="mk-gate" href="./mk/mk-gate.html" coords="643,1014,568,977" shape="rect">
+    <area target="" alt="skipper-canteen" title="skipper-canteen" href="./mk/mk-skipper-canteen.html" coords="1226,776,1451,740" shape="rect">
+    <area target="" alt="skipper-canteen" title="skipper-canteen" href="./mk/mk-skipper-canteen.html" coords="406,567,450,628" shape="rect">
+</map>
+<script>
+  $(document).ready(function() {
 
-        <area shape="circle" coords="155,56,26"
-            href="https://media.geeksforgeeks.org/wp-content/uploads/20190227165934/area3.png" 
-            alt="Circle">
+    $(".map-areas area").mouseenter(function() {
+        var idx = $(".map-areas area").index(this);
+        $(".map-hovers img:eq(" + idx + ")").show();
+        return false;
+    }).mouseleave(function() {
+        $(".map-hovers img").hide();
+        return false;
+    });
 
-        <area shape="rect" coords="224,30,276,82"
-            href="https://media.geeksforgeeks.org/wp-content/uploads/20190227170021/area4.png" 
-            alt="Square">
-    </map>
+});
+</script>
 </body>
 </html>
